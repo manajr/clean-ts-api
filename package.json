@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --passWithNoTest",
-    "test:staged": "jest --passWithNoTest"
+    "test": "jest --passWithNoTests",
+    "test:staged": "jest --passWithNoTests"
   },
   "keywords": [],
   "author": "",
@@ -30,7 +30,7 @@
   "husky":
     {
       "hooks": {
-        "pre-commit": "./node_modules/.bin/lint-staged"
+        "pre-commit": "lint-staged"
       }
     }
 }
