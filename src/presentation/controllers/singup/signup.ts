@@ -31,14 +31,15 @@ export class SignUpController implements Controller {
         return badRequest(new InvalidParamError('confirmationPassword'))
       }
       console.log(this.addAccount)
-      this.addAccount.add({
+      const account = this.addAccount.add({
         name,
         email,
         password
       })
+
       return {
-        body: {},
-        statusCode: 0
+        statusCode: 200,
+        body: account
       }
     } catch (error) {
       return serverError()
