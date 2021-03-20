@@ -23,7 +23,7 @@ describe('Account Mongo Repository', () => {
         name: 'manasses',
         email: 'manasses@gmail.com',
         password: '123',
-        passwordConfirmation: '123'
+        confirmationPassword: '123'
       })
       .expect(200)
   })
