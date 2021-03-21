@@ -30,7 +30,6 @@ export class SignUpController implements Controller {
       if (password !== confirmationPassword) {
         return badRequest(new InvalidParamError('confirmationPassword'))
       }
-      console.log(this.addAccount)
       const account = await this.addAccount.add({
         name,
         email,
